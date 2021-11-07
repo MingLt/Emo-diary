@@ -7,9 +7,6 @@ from Radical import getRadical, is_leftandright
 pinandzi = []
 MaxMatchType=2
 
-file_words = sys.argv[1]
-file_org = sys.argv[2]
-file_ans = sys.argv[3]
 
 class Word:  # 构建敏感词库
     def __init__(self, word):
@@ -303,11 +300,7 @@ class DFAUtils(object):
 
 if __name__ == '__main__':
     dfa = DFAUtils()
-    #path = 'C:/keep/words.txt'
-    dfa.parse(file_words)
-    #pathorg = 'C:/keep/org.txt'
-    dfa.read_org(file_org)
-    #pathans = 'C:/keep/ans.txt'
-    dfa.out_ans(file_ans)
+    dfa.parse(words)
+    dfa.read_org(org)
 
 
